@@ -4,8 +4,11 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var createError = require('http-errors');
 var logger = require('morgan');
+var session = require('express-session');
 
 var teamsRouter = require('./controllers/teams');
+
+app.use(session({secret: "session value"}));
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
