@@ -1,0 +1,33 @@
+{
+  "name": "backend-services",
+  "version": "1.0.0",
+  "description": "# Security - helmet",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "csurf": "^1.10.0",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.16.2",
+    "helmet": "^3.18.0",
+    "log4js": "^4.4.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saileemogale/backend-services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saileemogale/backend-services/issues"
+  },
+  "homepage": "https://github.com/saileemogale/backend-services#readme"
+}

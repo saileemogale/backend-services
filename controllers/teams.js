@@ -5,6 +5,9 @@ var logger = log4js.getLogger();
 logger.level = 'debug';
 var teamsModel = require('../models/index')
 var bodyParser = require('body-parser')
+var csrf = require('csurf')
+
+var csrfProtection = csrf({ cookie: true })
 
 
 var router = express.Router();
