@@ -31,6 +31,16 @@ router.get('/:team_name', (req, res) => {
 router.post('/', function (req, res) {
     logger.debug("Request body " + Object.values(req.body))
     req.session.teams = teamsModel.teams
+ 
+    req.session.teams.push(req.body)
+
+    console.log("Session " + Object.keys(req.session))
+    return res.send(req.session.teams);
+})
+
+router.post('/update', function (req, res) {
+    logger.debug("Request body " + Object.values(req.body))
+    req.session.teams = teamsModel.teams
 
     team = req.session.teams.filter(function(item){
         if (item.name == req.body['name']){
