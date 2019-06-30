@@ -15,10 +15,21 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0",
+    "sinon": "^7.3.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "mocha 'tests/*.js'",
+    "test-with-coverage": "nyc --reporter=text mocha 'tests/*.js'",
+    "dev": "nodemon --exec babel-node --presets babel-preset-env ./server.js"
   },
   "repository": {
     "type": "git",
